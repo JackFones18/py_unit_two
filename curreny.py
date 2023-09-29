@@ -32,13 +32,25 @@ r_pennies = round(r_nickels % .01, 2)
 pennies = round((r_nickels - r_pennies) / .01)
 
 print("you will need:")
-print(hundreds, "hundred dollar bill(s)")
-print(fifties, "fifty dollar bill(s)")
-print(twenties, "twenty dollar bill(s)")
-print(tens, "ten dollar bill(s)")
-print(fives, "five dollar bill(s)")
-print(ones, "one dollar bill(s)")
-print(quarters, "quarters")
-print(dimes, "dimes")
-print(nickels, "nickels")
-print("and", pennies, "pennies")
+
+#learned if statements from https://www.w3schools.com/python/python_conditions.asp
+if hundreds > 0:
+    print(hundreds, "hundred dollar bill(s)")
+if fifties > 0:
+    print(fifties, "fifty dollar bill(s)")
+if twenties > 0:
+    print(twenties, "twenty dollar bill(s)")
+if tens > 0:
+    print(tens, "ten dollar bill(s)")
+if fives > 0:
+    print(fives, "five dollar bill(s)")
+if ones > 0:
+    print(ones, "one dollar bill(s)")
+if quarters > 0:
+    print(quarters, "quarters")
+if dimes > 0:
+    print(dimes, "dimes")
+if nickels > 0:
+    print(nickels, "nickels")
+if pennies > 0:
+    print("and", pennies, "pennies")
