@@ -89,7 +89,7 @@ turtle.forward(10)
 turtle.left(180)
 turtle.forward(20)
 
-move(0,120)
+move(0,85)
 
 
 diameter=(float(garden_size)/2)
@@ -108,11 +108,27 @@ total_flowerbed_volume=(float(circle_volume)*3)
 fill_area=((float(garden_size)**2)-float(total_flower_area))
 fill_volume=round((float(fill_area)*float(fill_depth)),2)
 
-circle_flowers=round((float(circle_area)/float(plant_size)))
-semicircle_flowers=round((float(circle_area)/2)/float(plant_size))
+circle_flowers=round((float(circle_area)//float(plant_size)))
+semicircle_flowers=round((float(circle_area)/2)//float(plant_size))
 total_amount_flowers=round((float(circle_flowers)*3))
 
+move(0,0)
+turtle.write((circle_flowers,"flowers will fit here"),move=False,align="center",font=("arial",10,"bold"))
 
+move(0,-140)
+turtle.write((semicircle_flowers,"flowers will fit here"),move=False,align="center",font=("arial",10,"bold"))
+
+move(0,145)
+turtle.write((semicircle_flowers,"flowers will fit here"),move=False,align="center",font=("arial",10,"bold"))
+
+'''
+move(-120,0)
+turtle.left(90)
+turtle.write((semicircle_flowers,"flowers will fit here"),move=False,align="center",font=("arial",10,"bold"))
+
+move(120,0)
+turtle.write((semicircle_flowers,"flowers will fit here"),move=False,align="center",font=("arial",10,"bold"))
+'''
 print(".")
 print(".")
 print(".")
@@ -124,17 +140,8 @@ print("you will be able to fit",circle_flowers,"flowers in the center circle.")
 print("you will be able to fit",total_amount_flowers,"flowers in the garden.")
 print("the amount of soil required for each semicircle is:",semicircle_volume,"feet cubed")
 print("the amount of soil required for the center circle is:",circle_volume,"feet cubed")
+print("the total amount of soil required for the garden is:",total_flowerbed_volume,"feet cubed")
 print("the total amount of fill needed is:", fill_volume,"feet cubed")
 
-'''
-print("the aera of the center circle is:",circle_area,"feet squared")
-print("the total area occupied by the flowers is:",total_flower_area,"feet squared")
-print("the amount of soil required for the center circle is:",circle_volume,"feet cubed")
-print("the amount of soil required for each semicircle is:",semicircle_volume,"feet cubed")
-print("the total amount of soil needed is:",total_flowerbed_volume,"feet cubed")
-print("the area of the fill is:", fill_area,"feet squared")
-print("the total volume of fill needed is:", fill_volume,"feet cubed")
-print("you will be able to fit",circle_flowers,"in the center circle.")
-print("you will be able to fit", semicircle_flowers, "in each semicircle.")
-'''
+
 turtle.exitonclick()
