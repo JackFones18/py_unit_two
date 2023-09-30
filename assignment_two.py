@@ -28,6 +28,8 @@ fill_depth = input("what would you like the depth of the fill to be (in feet)? "
 print("")
 print("color options include, but are not limited to: yellow, gold, orange, red, maroon, violet, magenta, purple,")
 print("navy, blue, skyblue, cyan, turquoise, lightgreen, green, darkgreen, chocolate, brown, black, gray, white")
+print("a full list of colors can be found at https://cs111.wellesley.edu/labs/lab02/colors")
+print("")
 fill_color = input("what color would you like the fill to be? ")
 flower_color = input("what color would you like the flowers to be? ")
 
