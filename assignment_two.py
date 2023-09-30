@@ -8,10 +8,6 @@
 import turtle
 import math
 
-# This is to make the tutle go very fast and hides the cursor.
-turtle.speed(0)
-turtle.hideturtle()
-
 # This line makes it easier to call pi later when we do calculations, so I can just type pi and not math.pi.
 pi = math.pi
 
@@ -24,12 +20,20 @@ def move(x_coordinate, y):
 
 
 # These lines take user input, so it knows what values and colors to use for later calculations.
+print("for each input of a value, please enter your desired value to 2 decimal places. (ex.11.00, 14.75)")
 garden_size = input("how many feet would you like the side of your garden to be? ")
 plant_size = input("how much space (in feet) should each flower occupy? ")
 flowerbed_depth = input("what would you like the depth of the soil in the flowerbeds to be (in feet)? ")
 fill_depth = input("what would you like the depth of the fill to be (in feet)? ")
+print("")
+print("color options include, but are not limited to: yellow, gold, orange, red, maroon, violet, magenta, purple,")
+print("navy, blue, skyblue, cyan, turquoise, lightgreen, green, darkgreen, chocolate, brown, black, gray, white")
 fill_color = input("what color would you like the fill to be? ")
 flower_color = input("what color would you like the flowers to be? ")
+
+# This is to make the turtle go very fast and hides the cursor.
+turtle.speed(0)
+turtle.hideturtle()
 
 # Moves the turtle.
 move(-200, -200)
